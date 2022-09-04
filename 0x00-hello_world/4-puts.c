@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- *main function is the entry point
- *Return 0 in case of success 
- *Will return EOF if doesn't successed
+ * main - entry point
+ * Return: Always 0 in case of success 
+ * Will return EOF if doesn't successed
  */
 int main(void)
 {
