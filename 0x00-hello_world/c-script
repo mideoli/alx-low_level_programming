@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# task 0
+echo "#!/bin/bash\ngcc $CFILE -o c" > 0-preprocessor
+
+#task 1
+echo "#!/bin/bash\ngcc $CFILE -o main.o" > 1-compiler
+
+#task 2
+echo "#!/bin/bash\ngcc $CFILE -o main.s" > 2-assembler
+
+#task 3
+echo "#!/bin/bash\ngcc $CFILE -o cisfun" > 3-name
+
+chmod u+x *
+git add .
+git commit -m "add task 0 to 3"
