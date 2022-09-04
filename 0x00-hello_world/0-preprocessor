@@ -1,1 +1,2 @@
-#!/bin/bash\ngcc  -o c
+#!/bin/bash
+gcc  -o c

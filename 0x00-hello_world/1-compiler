@@ -1,1 +1,2 @@
-#!/bin/bash\ngcc  -o main.o
+#!/bin/bash
+gcc  -o main.o
