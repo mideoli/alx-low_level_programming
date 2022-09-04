@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # task 0
-echo -e "#!/bin/bash\ngcc $CFILE -o c" > 0-preprocessor
+echo -e "#!/bin/bash\ngcc '$CFILE' -o c" > 0-preprocessor
 
 #task 1
-echo -e "#!/bin/bash\ngcc $CFILE -o main.o" > 1-compiler
+echo -e "#!/bin/bash\ngcc '$CFILE' -o main.o" > 1-compiler
 
 #task 2
-echo -e "#!/bin/bash\ngcc $CFILE -o main.s" > 2-assembler
+echo -e "#!/bin/bash\ngcc '$CFILE' -o main.s" > 2-assembler
 
 #task 3
-echo -e "#!/bin/bash\ngcc $CFILE -o cisfun" > 3-name
+echo -e "#!/bin/bash\ngcc '$CFILE' -o cisfun" > 3-name
 
 chmod u+x *
 git add .
