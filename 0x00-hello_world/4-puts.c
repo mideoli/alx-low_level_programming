@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - entry point
+ *
  * Return: Always 0 in case of success 
  * Will return EOF if doesn't successed
  */
