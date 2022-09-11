@@ -2,10 +2,10 @@
 
 /**
  * main - prints all single digit numbers of base 10 starting from 0, using
- *  the putchar() fuction
+ *  the putchar() fuction.
  *
  *
- * return: 0 (success)
+ * return: 0 (success).
  */
 
 int main(void)

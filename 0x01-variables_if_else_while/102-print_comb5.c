@@ -4,7 +4,7 @@
  * main - prints all possible combinations of two two-digit numbers,
  *        ranging from 0-99, separated by a comma followed by a space.
  * num1 and num2: is short for number1 and number2
- * return 0: (success)
+ * return: 0 (success)
  */
 int main(void)
 {

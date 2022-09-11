@@ -4,9 +4,9 @@
 #include <stdio.h>
 /* betty style doc for function main goes there */
 /**
- *man - prints the last digit of a randomly generated number
+ * main - prints the last digit of a randomly generated number
  *
- * return: 0 (success)
+ * return: 0 (success).
  *
  */
 int main(void)

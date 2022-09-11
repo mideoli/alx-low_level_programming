@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * main - prints the alphabet in lowercase
- *
- * return 0: (success)
+ * main - prints the alphabet in lowercase.
+ * int c: representes the alphabet.
+ * return: 0 (success).
  *
  */
 
