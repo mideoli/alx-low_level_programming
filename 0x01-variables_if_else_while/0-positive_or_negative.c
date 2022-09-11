@@ -5,7 +5,7 @@
 /**
  * main- will assign a random number to the variable n each time it is executed.
  *
- * return: 0 (success).
+ * Return: 0 (success).
  *
  */
 

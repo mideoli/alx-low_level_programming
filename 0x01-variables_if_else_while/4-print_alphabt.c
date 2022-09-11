@@ -4,7 +4,7 @@
  * main - prints the alphabet in lowercase, except for letters 'e' and 'q'.
  * int c: represents the alphabet.
  *
- * return: 0 (success).
+ * Return: 0 (success).
  */
 
 int main(void)
