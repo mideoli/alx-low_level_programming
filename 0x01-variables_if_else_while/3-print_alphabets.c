@@ -10,6 +10,7 @@
 int main(void)
 {
 	int c;
+
 	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
@@ -18,5 +19,6 @@ int main(void)
 	{
 		putchar(toupper(c));
 	}
+	putchar('\n');
 	return (0);
 }

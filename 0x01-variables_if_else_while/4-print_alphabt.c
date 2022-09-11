@@ -10,6 +10,7 @@
 int main(void)
 {
 	int c = 'a';
+
 	do {
 		if (c != 'e' && c != 'q')
 		{
