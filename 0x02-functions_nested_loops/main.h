@@ -1,4 +1,1 @@
-char *_putchar()
-{
-	printf("_putchar\n");
-}
+char *_putchar(char[9] c);
