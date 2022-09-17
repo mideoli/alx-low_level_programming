@@ -8,4 +8,4 @@ int largest_number(int, int, int);
 void print_remaining_days(int, int, int);
 int convert_days(int, int);
 
-#enif /* MAIN_H */
+#endif /* MAIN_H */
