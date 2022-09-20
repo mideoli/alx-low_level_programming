@@ -3,12 +3,12 @@
 #include <stdio.h>
 
 /**
- * print_rev - prints a string i reverse order
+ * rev_string - reverses a string
  * @s: string to reverse
  * Return: nothing.
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int len = strlen(s);
 	
