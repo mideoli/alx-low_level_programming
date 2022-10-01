@@ -1,0 +1,7 @@
+#!/bin/bash
+cp ../0x09-static_libraries/curl/holbertonschool-low_level_programming/0x09-argc_argv/0-whatsmyname.c 
+cp ../0x09-static_libraries/curl/holbertonschool-low_level_programming/0x09-argc_argv/1-args.c .
+cp ../0x09-static_libraries/curl/holbertonschool-low_level_programming/0x09-argc_argv/100-change.c .
+cp ../0x09-static_libraries/curl/holbertonschool-low_level_programming/0x09-argc_argv/2-args.c .
+cp ../0x09-static_libraries/curl/holbertonschool-low_level_programming/0x09-argc_argv/3-mul.c .
+cp ../0x09-static_libraries/curl/holbertonschool-low_level_programming/0x09-argc_argv/4-add.c .
