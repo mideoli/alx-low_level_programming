@@ -2,49 +2,44 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-void print_char(va_list arg);
-void print_int(va_list arg);
-void print_float(va_list arg);
-void print_string(va_list arg);
+void print_char(va_list c);
+void print_int(va_list i);
+void print_float(va_list f);
+void print_string(va_list s);
 void print_all(const char * const format, ...);
 
 /**
  * print_char - Prints a char.
+ * A
  * @arg: A list of arguments pointing to
  *       the character to be printed.
  */
-void print_char(va_list arg)
+void print_char(va_list c)
 {
-	char letter;
-
-	letter = va_arg(arg, int);
-	printf("%c", letter);
+	printf("%c", va_arg(c, int));
 }
 
 /**
+ * A
  * print_int - Prints an int.
  * @arg: A list of arguments pointing to
  *       the integer to be printed.
  */
-void print_int(va_list arg)
-{
-	int num;
 
-	num = va_arg(arg, int);
-	printf("%d", num);
+void print_int(va_list i)
+{
+	printf("%d", va_arg(i, int));
 }
 
 /**
  * print_float - Prints a float.
+ * A
  * @arg: A list of arguments pointing to
  *       the float to be printed.
  */
-void print_float(va_list arg)
+void print_float(va_list f)
 {
-	float num;
-
-	num = va_arg(arg, double);
-	printf("%f", num);
+	printf("%f", va_arg(f, double));
 }
 
 /**
@@ -52,18 +47,14 @@ void print_float(va_list arg)
  * @arg: A list of arguments pointing to
  *       the string to be printed.
  */
-void print_string(va_list arg)
+void print_string(va_list s)
 {
-	char *str;
-
-	str = va_arg(arg, char *);
+	char *str = va_arg(s, char *);
 
 	if (str == NULL)
 	{
-		printf("(nil)");
-		return;
+		str = "(nil)";
 	}
-
 	printf("%s", str);
 }
 
@@ -78,36 +69,36 @@ void print_string(va_list arg)
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int i = 0, j = 0;
-	char *separator = "";
-	printer_t funcs[] = {
+	unsigned int i, j;
+
+	print_t p[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
-		{"s", print_string}
+		{"s", print_string},
+		{NULL, NULL}
 	};
+	va_list valist;
+	char *separator = "";
 
-	va_start(args, format);
-
-	while (format && (*(format + i)))
+	va_start(valist, format);
+	i = 0;
+	while (format && format[i])
 	{
 		j = 0;
-
-		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
-			j++;
-
-		if (j < 4)
+		while (p[j].t != NULL)
 		{
-			printf("%s", separator);
-			funcs[j].print(args);
-			separator = ", ";
+			if (*(p[j].t) == format[i])
+			{
+				printf("%s", separator);
+				p[j].f(valist);
+				separator = ", ";
+				break;
+			}
+			j++;
 		}
-
 		i++;
 	}
-
+	va_end(valist);
 	printf("\n");
-
-	va_end(args);
 }
