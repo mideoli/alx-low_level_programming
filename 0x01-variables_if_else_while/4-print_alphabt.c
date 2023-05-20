@@ -19,12 +19,10 @@ int main(void)
 
 	while (a <= z)
 	{
-		if (a == e && a == q)
+		if (a != e && a != q)
 		{
-			a++;
-			continue;
+			putchar(a);
 		}
-		putchar(a);
 		a++;
 	}
 	putchar('\n');
