@@ -3,6 +3,8 @@
 /**
  * _abs - function that computes the absolute value of an integer.
  * @n: integer to be computed.
+ *
+ * Return: absolute value of an integer.
  */
 
 int _abs(int n)
