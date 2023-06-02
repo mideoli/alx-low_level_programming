@@ -19,11 +19,14 @@ char *_strcat(char *dest, char *src)
 	while (dest[i++])
 		dest_len++;
 
-	while(src[i])
+	i = 0;
+
+	while (src[i])
 	{
 		dest[dest_len++] = src[i];
 		i++;
 	}
 
 	return (dest);
+	_putchar('\n');
 }
