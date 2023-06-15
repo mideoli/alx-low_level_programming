@@ -22,10 +22,9 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	
 	i = 0;
-	while (s1[i] || s2[i])
+	for (; s1[i] || s2[i]; i++)
 	{
 		len++;
-		i++;
 	}
 
 	concat_str = malloc(sizeof(char) * len);
@@ -33,16 +32,14 @@ char *str_concat(char *s1, char *s2)
 	if (concat_str == NULL)
 		return (NULL);
 
-	while (s1[i])
+	for (; s1[i]; i++)
 	{
 		concat_str[concat_i++] = s1[i];
-		i++;
 	}
 
-	while (s2[i])
+	for (i = 0; s2[i]; i++)
 	{
 		concat_str[concat_i++] = s2[i];
-		i++;
 	}
 
 	return (concat_str);
