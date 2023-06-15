@@ -23,34 +23,27 @@ int **alloc_grid(int width, int height)
 	if (twoD == NULL)
 		return (NULL);
 
-	hgt_index = 0;
-	while (hgt_index < height)
+	for (hgt_index = 0; hgt_index < height; hgt_index++)
 	{
 		twoD[hgt_index] = malloc(sizeof(int) * width);
 
 		if (twoD[hgt_index] == NULL)
 		{
-			hgt_index = 0;
-			while (hgt_index >= 0)
+			for (; hgt_index >= 0; hgt_index--)
 			{
 				free(twoD[hgt_index]);
-				hgt_index--;
 			}
 			free(twoD);
 			return (NULL);
 		}
-		hgt_index++;
 	}
 
-	while (hgt_index < height)
+	for (hgt_index = 0; hgt_index < height; hgt_index++)
 	{
-		wid_index = 0;
-		while (wid_index < width)
+		for (wid_index = 0; wid_index < width; wid_index++)
 		{
 			twoD[hgt_index][wid_index] = 0;
-			wid_index++;
 		}
-		hgt_index++;
 	}
 	return (twoD);
 }
